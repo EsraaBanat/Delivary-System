@@ -1,0 +1,21 @@
+npx sequelize-cli model:generate --name Users --attributes username:string,name:string,phone:string,age:integer
+npx sequelize-cli model:generate --name Tasks --attributes task_id:string,creator:integer,subject:string,description:string,status:string,claimed:boolean,priority:string,created_date:string,created_time:string,due_date:string,due_time:string,estimated_time:string,work_status:string,attachment:string
+npx sequelize-cli model:generate --name assign --attributes task_id:string,user_id:integer
+npx sequelize-cli model:generate --name Comments --attributes task_id:string,user_id:integer,user_name:string,comment:string
+npx sequelize-cli model:generate --name CommentsReplay --attributes replay_id:string,user_id:integer,user_name:string,comment:string,comment_id:string
+npx sequelize-cli model:generate --name OnHoldReasons --attributes task_id:string,reason:string,date:string,time:string,recored_status:string
+npx sequelize-cli model:generate --name Task --attributes action_id:string
+
+
+
+npx sequelize-cli seed:generate --name Users
+npx sequelize-cli seed:generate --name assign
+npx sequelize-cli seed:generate --name Comments
+
+
+npx sequelize-cli db:seed:all
+
+npx sequelize-cli db:seed --seed seeders/20220227081417-assign.js
+
+
+npx sequelize-cli model:generate --name Users --attributes id:string

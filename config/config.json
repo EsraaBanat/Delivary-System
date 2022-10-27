@@ -1,0 +1,22 @@
+{
+  "development": {
+    "username": "dev",
+    "password": "Dev@r00t",
+    "database": "Tasks",
+    "host": "192.81.217.171",
+    "dialect": "mysql",
+    "port":"50062",
+    "logging": false
+
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": "database.sqlite3",
+    "logging": false
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "database.sqlite3",
+    "logging": false
+  }
+}
