@@ -12,12 +12,11 @@ app.use(cors());
 
 //////////////////////////////////////////////////////
 
-const taskRoute = require("./rourter/route/taskRoute");
+const resturantRoute = require("./rourter/route/resturantRoutes");
 
-app.use("/task", taskRoute);
+app.use("/", resturantRoute);
 
 ///////////////////////////////////////////////////////
-
 const PORT = process.env.PORT;
 app.listen(PORT, async () => {
   try {

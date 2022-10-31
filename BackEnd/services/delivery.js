@@ -1,8 +1,8 @@
 const { sequelize } = require("../models/index");
 
-const createUserService = async (userDTO) => {
+const createDelivery = async (delivaryDTO) => {
   try {
-    return await sequelize.models.Users.create(userDTO);
+    return await sequelize.models.delivary.create(delivaryDTO);
   } catch (error) {
     throw error;
   }
@@ -27,6 +27,6 @@ const createUserService = async (userDTO) => {
 // };
 
 module.exports = {
-  createUserService,
+  createDelivery,
   //   updateRecordStatus,
 };

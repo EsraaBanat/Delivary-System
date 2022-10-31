@@ -6,7 +6,7 @@ const path = require("path");
 const Sequelize = require("sequelize");
 const sequelizeErd = require("sequelize-erd");
 const basename = path.basename(__filename);
-const env = process.env.NODE_ENV || "local";
+const env = process.env.NODE_ENV || "development";
 const config = require(path.normalize(__dirname + "/../config/config.js"))[env];
 const db = { models: {} };
 let sequelize;

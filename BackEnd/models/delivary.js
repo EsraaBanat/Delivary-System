@@ -1,7 +1,7 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class Task extends Model {
+  class delivary extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Task.init(
+  delivary.init(
     {
       seq: {
         type: DataTypes.INTEGER,
@@ -20,9 +20,8 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       id: { type: DataTypes.STRING, allowNull: false },
-      name: { type: DataTypes.STRING, allowNull: false },
-      reminder: { type: DataTypes.BOOLEAN, allowNull: false },
-      date: { type: DataTypes.STRING, allowNull: false },
+      resturantId: { type: DataTypes.STRING, allowNull: false },
+      delivaryPerson: { type: DataTypes.JSON, allowNull: false },
       recordStatus: {
         type: DataTypes.ENUM,
         values: ["LATEST", "UPDATED", "DELETED"],
@@ -32,12 +31,12 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: "Task",
+      modelName: "delivary",
       initialAutoIncrement: 1000000,
-      tableName: "Task_MySQl",
+      tableName: "delivary",
       underscored: true,
       freezeTableName: true,
     }
   );
-  return Task;
+  return delivary;
 };
